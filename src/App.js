@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import elipse from './assets/Ellipse 2.png'
+import Main from './components/Main/Main';
+import ErrorPage from './pages/ErrorPage';
+import Login from './components/Login/Login';
+import Features from './components/Features/Features';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    < div className="App">
+      <div className='max-width-wrapper'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/features' element={<Features />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+      </div>
+      <div className='elipse'>
+        <img src={elipse} ></img>
+      </div>
     </div>
   );
 }
