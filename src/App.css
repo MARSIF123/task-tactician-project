@@ -22,9 +22,15 @@
   max-width: 80vw;
   max-height: 70vh;
 }
+
+.react-icons {
+  background-color: white;
+  /* font-size: 10px; */
+}
+
 @media (max-width: 870px) {
-  .elipse{
+  .elipse {
     display: none;
   }
-  
+
 }
