@@ -32,7 +32,7 @@ function TaskItem({ children, isCompleted, isImportant, dueDate, id, groupId }) 
                     <RiCheckboxCircleLine />}
             </button>
             <p style={{ textDecoration: isCompleted ? 'line-through' : 'none' }}
-                className={styles.text}>{children} {`(${groupId})`}</p>
+                className={styles.text}>{children}</p>
             <p className={styles.date}>{day} </p>
             <button onClick={() => { toggleTaskImportance(id) }} className={styles.btn}>{isImportant ?
                 <VscStarFull /> :

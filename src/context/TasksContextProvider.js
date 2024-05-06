@@ -82,12 +82,14 @@ function TasksContextProvider({ children }) {
             }));
         }
         if (type === 'today') {
-            const today = new Date().format('DD-MM-YYYY')
+            const today = new Date()
+            const todayFormatted = today.getDate() + "-" + today.getMonth() + "-" + today.getFullYear();
+
             console.log({ today })
             setFilteredTasks(tasks.filter(task => {
                 const day = task.dueDate.getDate() + "-" + task.dueDate.getMonth() + "-" + task.dueDate.getFullYear();
                 console.log({ day })
-                return day === today
+                return day === todayFormatted
             }));
         }
 

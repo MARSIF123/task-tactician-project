@@ -37,7 +37,7 @@ function Sidebar() {
                 <button className={styles.button} type="submit"><FaSearch /></button>
             </form>
             <div className={styles.actions}>
-                <button className={styles.button} onClick={() => { setType('all-tasks') }}><FaPlus /> Add Task</button>
+                <button className={styles.button} onClick={() => { setType('all-tasks') }}><FaPlus /> All Task</button>
                 <button className={styles.button} onClick={() => { setType('important') }}><FaStar /> Important</button>
                 <button className={styles.button} onClick={() => { setType('today') }}><FaCalendar /> Today</button>
                 <button className={styles.button} onClick={() => { setType('completed') }}><FaCheckSquare /> Completed</button>
